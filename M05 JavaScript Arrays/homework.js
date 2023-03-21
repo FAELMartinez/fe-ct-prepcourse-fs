@@ -3,34 +3,51 @@
 function devolverPrimerElemento(array) {
    // Retornar el primer elemento del arreglo recibido por parámetro.
    // Tu código:
+   //siempre que hay un arreglo el 1er elemento se lee desde el "0"
+   return array [0];
 }
 
 function devolverUltimoElemento(array) {
    // Retornar el último elemento del arreglo recibido por parámetro.
    // Tu código:
+   // se debe tener en cuenta que son los elementos - 1.
+   return array [array.length-1];
 }
 
 function obtenerLargoDelArray(array) {
    // Retornar la longitud del arreglo recibido por parámetro.
    // Tu código:
+   // propiedad .length (gallina tiene huevo) - permite trabajar sobre la longitud.
+   return array.length;
 }
 
 function incrementarPorUno(array) {
    // El arreglo recibido por parámetro contiene números.
    // Retornar un arreglo con los elementos incrementados en +1.
    // Tu código:
+   //a cada elemento del vector sumarle uno y guardarlo en el vector.
+   for (var i = 0;i<array.length;i++) {
+      array[i]=array[i]+1;
+   }
+   return array;
 }
 
 function agregarItemAlFinalDelArray(array, elemento) {
    // Agrega el "elemento" al final del arreglo recibido.
    // Retorna el arreglo.
    // Tu código:
+   //se usa método, array.push agrega elemento al vector
+   array.push(elemento);
+   return array;
 }
 
 function agregarItemAlComienzoDelArray(array, elemento) {
    // Agrega el "elemento" al comienzo del arreglo recibido.
    // Retorna el arreglo.
    // Tu código:
+   //unshift lo pone al elemento agregado en posición 0
+   array. unshift(elemento);
+   return array;
 }
 
 function dePalabrasAFrase(palabras) {
@@ -38,19 +55,38 @@ function dePalabrasAFrase(palabras) {
    // Retornar un string donde todas las palabras estén concatenadas
    // con un espacio entre cada palabra.
    // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'.
+   //tiene elementos de string, y hay que meterlos a todos los elementos en un solo string, con espacio.
+   //atento, cambia de ARRAY a PALABRA. join une!
    // Tu código:
+   return palabras.join(" ");
 }
 
 function arrayContiene(array, elemento) {
    // Verifica si el elemento existe dentro del arreglo recibido.
    // Retornar true si está, o false si no está.
+   //RECORRER el array con un FOR
+   // VAR I = 0  -- que es nuestro índice
+   // I < array.length -- le estamos dando como máximo el largo del array
+   //I++ --- le vamos a decir que vaya iterando uno por uno
+   //ARRAY[I] --- DENTRO DEL ELEMENTO QUE ESTÁ DENTRO DEL INDICE 
    // Tu código:
-}
-
+   //
+   for (var i = 0; i < array.length;i++) {
+      if (array[i] === elemento) {
+         return true;
+      }
+   }
+         return false;
+   }   
 function agregarNumeros(arrayOfNums) {
    // El parámetro "arrayOfNums" debe ser un arreglo de números.
    // Suma todos los elementos y retorna el resultado.
+   // de la var suma, que vaya sumando desde el valor inicial una posición más.asi después, la variable suma se convierte en ese valor
    // Tu código:
+   var suma = 0
+   for (i = 0; i < arrayOfNums; i++) {
+      suma <
+   }
 }
 
 function promedioResultadosTest(resultadosTest) {
@@ -88,6 +124,10 @@ function empiezaConNueve(num) {
    // Esta función recibe por parámetro un número.
    // Debe retornar true si el entero inicia con 9 y false en otro caso.
    // Tu código:
+   if (num === 9) {
+      return true;
+   }
+   else return false;
 }
 
 function todosIguales(array) {
