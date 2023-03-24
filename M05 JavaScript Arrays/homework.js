@@ -175,7 +175,7 @@ function todosIguales(array) {
    }
    return count === array.length;
 }
-
+   
 function mesesDelAño(array) {
    // El arreglo contiene algunos meses del año desordenados. Debes recorrerlo, buscar los meses "Enero",
    // "Marzo" y "Noviembre", guardarlos en un nuevo arreglo y retornarlo.
